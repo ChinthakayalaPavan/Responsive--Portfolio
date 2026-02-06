@@ -1,288 +1,466 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Portfolio</title>
+  <meta charset="UTF-8">
+  <title>Privacy Policy - Bottle Puzzle Arena</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- swiper css -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <style>
+    :root {
+        --bg: #0b0c10;
+        --card-bg: #151720;
+        --accent: #ffaf2a;
+        --accent-soft: #ffe2a4;
+        --text-main: #f5f5f5;
+        --text-muted: #bbbbc7;
+        --border: #2a2d3a;
+    }
 
-    <!-- box icons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 
-    <!-- custom css -->
-    <link rel="stylesheet" href="style.css">
+    body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: radial-gradient(circle at top, #22253a 0, #0b0c10 55%);
+        color: var(--text-main);
+        line-height: 1.7;
+        padding: 24px 12px;
+    }
+
+    .page {
+        max-width: 900px;
+        margin: 0 auto;
+        background: rgba(11, 12, 16, 0.9);
+        border-radius: 18px;
+        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.04);
+        padding: 24px;
+    }
+
+    @media (min-width: 768px) {
+        body {
+            padding: 40px 16px;
+        }
+        .page {
+            padding: 32px 40px;
+        }
+    }
+
+    .tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.09em;
+        padding: 4px 10px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        color: var(--accent-soft);
+        background: radial-gradient(circle at top left, rgba(255, 175, 42, 0.2), transparent);
+        margin-bottom: 10px;
+    }
+
+    .tag-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 999px;
+        background: var(--accent);
+    }
+
+    h1 {
+        font-size: 26px;
+        margin-bottom: 6px;
+        color: #ffffff;
+    }
+
+    .subtitle {
+        font-size: 13px;
+        color: var(--text-muted);
+        margin-bottom: 18px;
+    }
+
+    .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 18px;
+        font-size: 12px;
+        color: var(--text-muted);
+        margin-bottom: 22px;
+    }
+
+    .meta span {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .meta-badge {
+        font-size: 11px;
+        border-radius: 999px;
+        padding: 2px 10px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        color: var(--accent-soft);
+    }
+
+    .meta-label {
+        font-weight: 600;
+        color: #e0e0ff;
+    }
+
+    .toc {
+        margin: 18px 0 22px;
+        padding: 14px 16px;
+        border-radius: 14px;
+        background: rgba(21, 23, 32, 0.96);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .toc-title {
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: var(--accent-soft);
+    }
+
+    .toc ul {
+        list-style: none;
+        font-size: 13px;
+    }
+
+    .toc li {
+        margin: 4px 0;
+    }
+
+    .toc a {
+        color: var(--text-muted);
+        text-decoration: none;
+    }
+
+    .toc a:hover {
+        color: var(--accent);
+    }
+
+    .section {
+        margin-bottom: 22px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .section:last-of-type {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .section h2 {
+        font-size: 17px;
+        margin-bottom: 8px;
+        color: var(--accent-soft);
+    }
+
+    .section p {
+        font-size: 14px;
+        color: var(--text-main);
+        margin-bottom: 8px;
+    }
+
+    .section ul {
+        padding-left: 18px;
+        margin: 4px 0 8px;
+    }
+
+    .section li {
+        font-size: 14px;
+        color: var(--text-main);
+        margin-bottom: 4px;
+    }
+
+    .note {
+        font-size: 12px;
+        color: var(--text-muted);
+        margin-top: 4px;
+    }
+
+    .contact-card {
+        margin-top: 8px;
+        padding: 10px 12px;
+        border-radius: 12px;
+        background: rgba(21, 23, 32, 0.96);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        font-size: 13px;
+    }
+
+    .contact-card div {
+        margin-bottom: 3px;
+    }
+
+    a {
+        color: var(--accent-soft);
+    }
+
+    a:hover {
+        color: var(--accent);
+    }
+
+    .top-button {
+        margin-top: 10px;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 7px 12px;
+        border-radius: 999px;
+        border: 1px solid rgba(255,255,255,0.12);
+        font-size: 12px;
+        color: var(--accent-soft);
+        background: linear-gradient(135deg, rgba(255,175,42,0.16), rgba(11,12,16,0.9));
+        cursor: pointer;
+    }
+
+    .top-button:hover {
+        border-color: var(--accent);
+    }
+  </style>
 </head>
-
 <body>
+<div class="page" id="top">
+  <div class="tag">
+    <span class="tag-dot"></span>
+    Privacy Policy
+  </div>
 
-    <!-- header design -->
-    <header class="header">
-        <a href="#" class="logo">Portfolio.</a>
+  <h1>Privacy Policy</h1>
+  <div class="subtitle">
+    This Privacy Policy explains how <strong>CityHall App Studio (CAS)</strong> collects, uses, and protects
+    information in the <strong>Bottle Puzzle Arena</strong> Android puzzle game.
+  </div>
 
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
-        </nav>
+  <div class="meta">
+    <span><span class="meta-label">App:</span> Bottle Puzzle Arena (Android puzzle game)</span>
+    <span><span class="meta-label">Company:</span> CityHall App Studio (CAS)</span>
+    <span class="meta-badge">Last updated: <span id="lastUpdatedText">6 February 2026</span></span>
+  </div>
 
-        <div class="bx bx-moon" id="darkMode-icon"></div>
+  <div class="toc">
+    <div class="toc-title">Contents</div>
+    <ul>
+      <li><a href="#section1">1. Introduction</a></li>
+      <li><a href="#section2">2. Information We Collect</a></li>
+      <li><a href="#section3">3. How We Use Information</a></li>
+      <li><a href="#section4">4. Third-Party Services</a></li>
+      <li><a href="#section5">5. Advertising</a></li>
+      <li><a href="#section6">6. Children’s Privacy</a></li>
+      <li><a href="#section7">7. Data Retention</a></li>
+      <li><a href="#section8">8. Data Security</a></li>
+      <li><a href="#section9">9. Your Choices & Rights</a></li>
+      <li><a href="#section10">10. Changes to This Policy</a></li>
+      <li><a href="#section11">11. Contact Us</a></li>
+    </ul>
+  </div>
 
-        <div class="bx bx-menu" id="menu-icon"></div>
-    </header>
+  <div class="section" id="section1">
+    <h2>1. Introduction</h2>
+    <p>
+      This Privacy Policy applies to the mobile game <strong>Bottle Puzzle Arena</strong> (the “App”),
+      developed and published by <strong>CityHall App Studio (CAS)</strong> (“we”, “our”, or “us”).
+    </p>
+    <p>
+      By installing or using the App, you agree to the collection and use of information in accordance
+      with this Privacy Policy. If you do not agree, please do not use the App.
+    </p>
+  </div>
 
-    <!-- home section design -->
-    <section class="home" id="home">
-        <div class="home-content">
-            <h3>Hello, I am</h3>
-            <h1><span>Chinthakayala</span> Pavan</h1>
-            <p>
-                I'm working in web development and Design.
-                I enjoy creating beautiful and intuitive web designs using Html css 
-                and make them interactive with Javascript.
-            </p>
+  <div class="section" id="section2">
+    <h2>2. Information We Collect</h2>
+    <p>
+      We do not ask you to create an account or provide personal details such as your real name,
+      address, or phone number inside the App.
+    </p>
+    <p>However, the App and its third-party services may collect the following types of information:</p>
+    <ul>
+      <li><strong>Device information</strong> (such as device model, operating system version, language, and region).</li>
+      <li><strong>Usage data</strong> (such as screens viewed, buttons tapped, time spent in levels, and basic gameplay events).</li>
+      <li><strong>Crash and performance data</strong> (to help us fix bugs and improve stability).</li>
+      <li><strong>Advertising identifiers</strong> (such as Google Advertising ID) used for ad display and frequency capping.</li>
+    </ul>
+    <p>
+      This information is generally collected in an anonymized or aggregated form and cannot directly identify you.
+    </p>
+  </div>
 
-            <div class="social-media">
-                <a href="#"><i class='bx bxl-instagram-alt'></i></a>
-                <a href="#"><i class='bx bxl-facebook'></i></a>
-                <a href="#"><i class='bx bxl-twitter'></i></a>
-                <a href="#"><i class='bx bxl-linkedin'></i></a>
-            </div>
+  <div class="section" id="section3">
+    <h2>3. How We Use Information</h2>
+    <p>We use the information described above for purposes such as:</p>
+    <ul>
+      <li>Ensuring the App works correctly on your device.</li>
+      <li>Improving gameplay, balancing difficulty, and enhancing the player experience.</li>
+      <li>Monitoring App performance and fixing crashes or errors.</li>
+      <li>Showing ads and measuring their performance, where applicable.</li>
+      <li>Preventing fraud, misuse, or other harmful activity within the App.</li>
+    </ul>
+  </div>
 
-            <a href="#" class="btn">Download CV</a>
-        </div>
+  <div class="section" id="section4">
+    <h2>4. Third-Party Services</h2>
+    <p>
+      The App may include third-party services that collect and process data in accordance with their own
+      privacy policies. These may include, for example:
+    </p>
+    <ul>
+      <li><strong>Advertising networks</strong> (such as Google AdMob) for serving ads.</li>
+      <li><strong>Analytics services</strong> (such as Google Firebase Analytics or similar tools) to understand how the App is used.</li>
+    </ul>
+    <p>
+      These third-party providers may receive information such as your device identifiers, general location
+      (country/region), and usage data. We recommend reviewing the privacy policies of these providers for more details.
+    </p>
+    <p class="note">
+      Example: Google’s Privacy Policy is available at
+      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
+        https://policies.google.com/privacy
+      </a>.
+    </p>
+  </div>
 
-        <div class="profession-container">
-            <div class="profession-box">
-                <div class="profession" style="--i:0;">
-                    <i class='bx bx-code-alt'></i>
-                    <h3>Web Developer</h3>
-                </div>
-                <div class="profession" style="--i:1;">
-                    <i class='bx bx-code'></i>
-                    <h3>Software Developer</h3>
-                </div>
-                <div class="profession" style="--i:2;">
-                    <i class='bx bx-palette'></i>
-                    <h3>Canva Designer</h3>
-                </div>
-                <div class="profession" style="--i:3;">
-                    <i class='bx bx-video-recording'></i>
-                    <h3>Video Editor</h3>
-                </div>
+  <div class="section" id="section5">
+    <h2>5. Advertising</h2>
+    <p>
+      The App may display ads to help keep the game free to play. Advertisers and ad networks may use
+      advertising identifiers and other information to:
+    </p>
+    <ul>
+      <li>Show ads in the App.</li>
+      <li>Limit how many times you see the same ad.</li>
+      <li>Measure ad performance and detect invalid traffic.</li>
+    </ul>
+    <p>
+      You can usually control whether you receive interest-based (personalized) ads by adjusting settings
+      on your device:
+    </p>
+    <ul>
+      <li>On Android, you can limit ad personalization in your Google account or device ad settings.</li>
+    </ul>
+  </div>
 
-                <div class="circle"></div>
-            </div>
+  <div class="section" id="section6">
+    <h2>6. Children’s Privacy</h2>
+    <p>
+      Bottle Puzzle Arena is designed for general audiences. We do not knowingly collect personal information
+      from children under the age of 13 (or a higher age where required by local law).
+    </p>
+    <p>
+      If you believe that a child has provided personal information to us, please contact us using the details
+      below and we will take steps to remove such information.
+    </p>
+  </div>
 
-            <div class="overlay"></div>
-        </div>
+  <div class="section" id="section7">
+    <h2>7. Data Retention</h2>
+    <p>
+      We retain data only for as long as it is necessary for the purposes described in this Privacy Policy,
+      or as required by applicable law. Third-party providers may have their own data retention periods,
+      which are described in their respective privacy policies.
+    </p>
+  </div>
 
-        <div class="home-img">
-            <img src="portfolio.png" alt="">
-        </div>
-    </section>
+  <div class="section" id="section8">
+    <h2>8. Data Security</h2>
+    <p>
+      We use reasonable technical and organizational measures to protect information processed in connection
+      with the App. However, no method of transmission over the internet or method of electronic storage is
+      completely secure, and we cannot guarantee absolute security.
+    </p>
+  </div>
 
-    <!-- about section design -->
-    <section class="about" id="about">
-        <div class="about-img">
-            <img src="portfolio.png" alt="">
-        </div>
+  <div class="section" id="section9">
+    <h2>9. Your Choices & Rights</h2>
+    <p>
+      Depending on your device and platform, you may have options to control certain types of data processing.
+      For example, you may:
+    </p>
+    <ul>
+      <li>Limit or reset advertising identifiers in your device settings.</li>
+      <li>Disable analytics or personalized ads where such options are provided by third-party services.</li>
+      <li>Uninstall the App if you no longer wish to allow any collection or use of information related to it.</li>
+    </ul>
+    <p>
+      If you have questions about how your data is handled in relation to Bottle Puzzle Arena,
+      you can contact us directly.
+    </p>
+  </div>
 
-        <div class="about-content">
-            <h2 class="heading">About <span>Me</span></h2>
-            <p>
-                My job is to build your website so that it is functional and 
-                user-friendly but at the same time attractive.
-            </p>
-            <p>
-                Moreover, I add personal touch to your product and make sure that is eye-catching and easy to use. 
-                My aim is to bring across your message and identity in the most creative way. 
-                I created web design for many famous brand companies.
-            </p>
-            <a href="#" class="btn">Read More</a>
-        </div>
-    </section>
+  <div class="section" id="section10">
+    <h2>10. Changes to This Policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time, for example to reflect changes in the App,
+      legal requirements, or our data practices.
+    </p>
+    <p>
+      When we make changes, we will update the “Last updated” date at the top of this page.
+      We recommend reviewing this page periodically for any changes.
+    </p>
+  </div>
 
-    <!-- services section design -->
-    <section class="services" id="services">
-        <h2 class="heading">My <span>Services</span></h2>
-
-        <div class="services-container">
-            <div class="services-box">
-                <i class='bx bx-code-alt'></i>
-                <h3>Web Development</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi itaque similique, architecto
-                    eaque ut quas delectus pariatur nesciunt in eligendi mollitia dicta.</p>
-                <a href="#" class="btn">Read More</a>
-            </div>
-            <div class="services-box">
-                <i class='bx bxs-paint'></i>
-                <h3>Canva Design</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi itaque similique, architecto
-                    eaque ut quas delectus pariatur nesciunt in eligendi mollitia dicta.</p>
-                <a href="#" class="btn">Read More</a>
-            </div>
-            <div class="services-box">
-                <i class='bx bx-bar-chart-alt'></i>
-                <h3>Video Editor</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi itaque similique, architecto
-                    eaque ut quas delectus pariatur nesciunt in eligendi mollitia dicta.</p>
-                <a href="#" class="btn">Read More</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- portfolio section design -->
-    <section class="portfolio" id="portfolio">
-        <h2 class="heading">Latest <span>Projects</span></h2>
-
-        <div class="portfolio-container">
-            <div class="portfolio-box">
-                <img src="pf1.png" alt="">
-
-                <div class="portfolio-layer">
-                    <h4>Portfolio</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ipsam est.</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-            <div class="portfolio-box">
-                <img src="plants.png" alt="">
-
-                <div class="portfolio-layer">
-                    <h4>Plants</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ipsam est.</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-            <div class="portfolio-box">
-                <img src="movies.png" alt="">
-
-                <div class="portfolio-layer">
-                    <h4>Movies</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ipsam est.</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-            <div class="portfolio-box">
-                <img src="pf2.png" alt="">
-
-                <div class="portfolio-layer">
-                    <h4>Portfolio</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ipsam est.</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-            <div class="portfolio-box">
-                <img src="restaurent.png" alt="">
-
-                <div class="portfolio-layer">
-                    <h4>restaurent</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ipsam est.</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-            <div class="portfolio-box">
-                <img src="ecom.png" alt="">
-
-                <div class="portfolio-layer">
-                    <h4>Ecom</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ipsam est.</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- testimonial design -->
-    <div class="testimonial-container">
-        <h2 class="heading"><span>Testimonial</span></h2>
-
-        <div class="testimonial-wrapper">
-            <div class="testimonial-box mySwiper">
-                <div class="testimonial-content swiper-wrapper">
-                    <div class="testimonial-slide swiper-slide">
-                        <img src="test1.jpg" alt="">
-                        <h3>Becky</h3>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem dignissimos aliquid
-                            iure delectus corrupti impedit, beatae aperiam ad iusto nostrum possimus cum pariatur harum
-                            assumenda suscipit a, qui, tempora maxime nulla facere quo ipsum tempore. Atque libero
-                            provident ad aut officia pariatur voluptate quaerat delectus nesciunt, sequi eligendi
-                            aperiam fugit unde nihil, iste similique illum. Dignissimos enim officia consequuntur
-                            dolores.</p>
-                    </div>
-                    <div class="testimonial-slide swiper-slide">
-                        <img src="test-2.jpg" alt="">
-                        <h3>King</h3>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem dignissimos aliquid
-                            iure delectus corrupti impedit, beatae aperiam ad iusto nostrum possimus cum pariatur harum
-                            assumenda suscipit a, qui, tempora maxime nulla facere quo ipsum tempore. Atque libero
-                            provident ad aut officia pariatur voluptate quaerat delectus nesciunt, sequi eligendi
-                            aperiam fugit unde nihil, iste similique illum. Dignissimos enim officia consequuntur
-                            dolores.</p>
-                    </div>
-                    <div class="testimonial-slide swiper-slide">
-                        <img src="test-3.jpg" alt="">
-                        <h3>Ronda</h3>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem dignissimos aliquid
-                            iure delectus corrupti impedit, beatae aperiam ad iusto nostrum possimus cum pariatur harum
-                            assumenda suscipit a, qui, tempora maxime nulla facere quo ipsum tempore. Atque libero
-                            provident ad aut officia pariatur voluptate quaerat delectus nesciunt, sequi eligendi
-                            aperiam fugit unde nihil, iste similique illum. Dignissimos enim officia consequuntur
-                            dolores.</p>
-                    </div>
-                </div>
-
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </div>
+  <div class="section" id="section11">
+    <h2>11. Contact Us</h2>
+    <p>
+      If you have any questions, feedback, or requests regarding this Privacy Policy or the App,
+      please contact us:
+    </p>
+    <div class="contact-card">
+      <div><strong>Developer:</strong> CityHall App Studio (CAS)</div>
+      <div><strong>App:</strong> Bottle Puzzle Arena</div>
+      <div><strong>Email:</strong>
+        <a href="mailto:pavanchintakayala1234@gmail.com">
+          pavanchintakayala1234@gmail.com
+        </a>
+      </div>
     </div>
 
-    <!-- contact section design -->
-    <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me!</span></h2>
+    <button class="top-button" id="btnBackToTop" type="button">
+      ↑ Back to top
+    </button>
+  </div>
+</div>
 
-        <form action="#">
-            <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email Address">
-            </div>
-            <div class="input-box">
-                <input type="" placeholder="Mobile Number">
-                <input type="text" placeholder="Email Subject">
-            </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <input type="submit" value="Send Message" class="btn">
-        </form>
-    </section>
+<script>
+  // Optional: dynamically control the "Last updated" text if you ever want to change via JS
+  (function () {
+      // Set this if you want to update quickly in future:
+      const lastUpdated = "6 February 2026";
+      const el = document.getElementById("lastUpdatedText");
+      if (el) {
+          el.textContent = lastUpdated;
+      }
 
-    <!-- footer design -->
-    <footer class="footer">
-        <div class="footer-text">
-            <p>Copyright &copy; All Rights Reserved.</p>
-        </div>
+      // Smooth scroll back to top button
+      const btnTop = document.getElementById("btnBackToTop");
+      if (btnTop) {
+          btnTop.addEventListener("click", function () {
+              window.scrollTo({
+                  top: 0,
+                  behavior: "smooth"
+              });
+          });
+      }
 
-        <div class="footer-iconTop">
-            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
-        </div>
-    </footer>
-
-
-    <!-- scroll reveal -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-
-    <!-- swiper js -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-    <!-- custom js -->
-    <script src="script.js"></script>
+      // Smooth scroll for internal links in table of contents
+      document.querySelectorAll('.toc a[href^="#"]').forEach(function (link) {
+          link.addEventListener("click", function (e) {
+              e.preventDefault();
+              const targetId = this.getAttribute("href").substring(1);
+              const targetEl = document.getElementById(targetId);
+              if (targetEl) {
+                  const yOffset = -10;
+                  const rect = targetEl.getBoundingClientRect();
+                  const y = rect.top + window.pageYOffset + yOffset;
+                  window.scrollTo({ top: y, behavior: "smooth" });
+              }
+          });
+      });
+  })();
+</script>
 </body>
-
 </html>
